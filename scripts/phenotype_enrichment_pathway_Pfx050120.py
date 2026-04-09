@@ -42,7 +42,7 @@ def create_visualization_files(dname,tlist,phen_file,net_file,outdir):
 	fN.write('\t'.join(hed))
 	for t in tlist:
 		fN.write('\t'.join([dname,t,'1.0','\n']))
-	net_lines = [l.strip() for l in open(net_file,'rU').readlines()]
+	net_lines = [l.strip() for l in open(net_file,'r').readlines()]
 	net_lines = [l for l in net_lines if len(l) > 2] # remove self-loops to drug-target proteins
 	n = fN.write('\n'.join(net_lines)+'\n')
 
@@ -54,7 +54,7 @@ def create_visualization_files(dname,tlist,phen_file,net_file,outdir):
 	nT.write('\t'.join([dname,'drug','\n']))
 	for t in tlist:
 		nT.write('\t'.join([t,'drug_target','\n']))
-	phen_read = csv.DictReader(open(phen_file,'rU'),delimiter='\t')
+	phen_read = csv.DictReader(open(phen_file,'r'),delimiter='\t')
 	for row in phen_read:
 		ph = row['phenotype']
 		nT.write('\t'.join([ph,'phenotype','\n']))

@@ -9,3 +9,7 @@ results/phenotype_characterization/
 *spn_hash_batch_*.pkl
 schizophrenia_spark/*
 data/Drugbank050120.xlsx
+/.direnv
+/pathfx/__pycache__
+/results
+/.envrc

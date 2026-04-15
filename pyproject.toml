@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pathfx"
+version = "0.1.0"
+description = "Drug-protein interaction and phenotype association analysis"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "matplotlib",
+    "seaborn",
+    "networkx",
+    "scikit-learn",
+    "openpyxl",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pathfx"]

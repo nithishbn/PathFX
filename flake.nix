@@ -37,6 +37,8 @@
         networkx
         fastcluster
         statsmodels
+        openpyxl
+        scikit-learn
       ]);
 
     # Text::OverlapFinder is bundled inside Text-Similarity — not in nixpkgs
